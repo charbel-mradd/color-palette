@@ -1,0 +1,83 @@
+ 
+
+
+
+
+
+
+You said:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Color Palette App</title>
+  <!-- Google Fonts Integration -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+IN:wght@100..400&family=Playwrite+VN:wght@100..400&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <h1>Color Palette App</h1>
+  
+  <button id="darkModeToggle"> Dark Mode</button>
+
+
+  <!-- Palette Creation Form -->
+  <form id="paletteForm">
+    <h2>Create a Palette</h2>
+    <!-- Palette Name Input -->
+    <div class="input-group">
+      <label>
+        Palette Name:
+        <input type="text" id="paletteName" placeholder="Enter palette name" required>
+      </label>
+    </div>
+    <!-- Color Inputs with AI Color Naming Display -->
+    <div class="input-group">
+      <label>
+        Color 1:
+        <input type="color" id="color1" value="#ff0000">
+        <div class="color-name" data-for="color1"></div>
+      </label>
+      <label>
+        Color 2:
+        <input type="color" id="color2" value="#00ff00">
+        <div class="color-name" data-for="color2"></div>
+      </label>
+      <label>
+        Color 3:
+        <input type="color" id="color3" value="#0000ff">
+        <div class="color-name" data-for="color3"></div>
+      </label>
+    </div>
+    <!-- Buttons for Saving, Generating, and Naming Colors -->
+    <div class="buttons">
+      <button type="submit">Save Palette</button>
+      <button type="button" id="generateBtn">Generate Palette</button>
+      <button type="button" id="nameBtn">Name Colors</button>
+    </div>
+  </form>
+
+  <!-- Saved Palettes Section -->
+  <section class="section">
+    <h2>Saved Palettes</h2>
+    <div id="palettes" class="palettes">
+      <!-- Dynamically generated palettes will appear here -->
+    </div>
+  </section>
+
+  <!-- Favorites Section -->
+  <section class="section">
+    <h2>Favorites</h2>
+    <div id="favorites" class="favorites">
+      <!-- Dynamically generated favorite palettes will appear here -->
+    </div>
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>
